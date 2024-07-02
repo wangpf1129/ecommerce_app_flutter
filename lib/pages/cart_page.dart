@@ -22,27 +22,33 @@ class _CartPageState extends State<CartPage> {
       return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(children: [
-          const Text('Cart',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              )),
-
-          const SizedBox(height: 10),
-
-          // cart items
-          Expanded(
-            child: ListView.builder(
-              itemCount: value.getUserCart().length,
-              itemBuilder: (context, index) {
-                Shoe individualShoe = value.getUserCart()[index];
-                return CartItem(
-                    individualShoe: individualShoe,
-                    onTabToRemoveItem: () =>
-                        removeItemFromCart(individualShoe));
-              },
-            ),
+          const Align(
+            alignment: Alignment.centerLeft,
+            child: Text('Cart',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                )),
           ),
+          const SizedBox(height: 10),
+          if (value.getUserCart().isEmpty)
+            const Expanded(
+                child: Center(
+              child: Text('Your cart is empty!'),
+            ))
+          else // cart items
+            Expanded(
+              child: ListView.builder(
+                itemCount: value.getUserCart().length,
+                itemBuilder: (context, index) {
+                  Shoe individualShoe = value.getUserCart()[index];
+                  return CartItem(
+                      individualShoe: individualShoe,
+                      onTabToRemoveItem: () =>
+                          removeItemFromCart(individualShoe));
+                },
+              ),
+            ),
         ]),
       );
     });
