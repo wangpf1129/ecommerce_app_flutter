@@ -1,9 +1,9 @@
 import 'package:ecommerce_app_flutter/models/shoe.dart';
 import 'package:flutter/material.dart';
 
-class ShoeTitle extends StatelessWidget {
+class ShoeTile extends StatelessWidget {
   Shoe shoe;
-  ShoeTitle({super.key, required this.shoe});
+  ShoeTile({super.key, required this.shoe});
 
   @override
   Widget build(BuildContext context) {

@@ -1,4 +1,4 @@
-import 'package:ecommerce_app_flutter/components/shoe_title.dart';
+import 'package:ecommerce_app_flutter/components/shoe_tile.dart';
 import 'package:ecommerce_app_flutter/models/shoe.dart';
 import 'package:flutter/material.dart';
 
@@ -81,7 +81,7 @@ class _ShopPageState extends State<ShopPage> {
                       imagePath: 'lib/images/Nike-P-6000.png',
                       description:
                           'The Nike Air Max 90 stays true to its OG roots with its iconic Waffle sole.');
-                  return ShoeTitle(shoe: shoe);
+                  return ShoeTile(shoe: shoe);
                 })),
 
         const Padding(
