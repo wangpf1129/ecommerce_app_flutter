@@ -2,9 +2,9 @@ import 'package:ecommerce_app_flutter/models/shoe.dart';
 import 'package:flutter/material.dart';
 
 class ShoeTile extends StatelessWidget {
-  Shoe shoe;
-  void Function()? onTapAddToCart;
-  ShoeTile({super.key, required this.shoe, required this.onTapAddToCart});
+  final Shoe shoe;
+  final void Function()? onTapAddToCart;
+  const ShoeTile({super.key, required this.shoe, required this.onTapAddToCart});
 
   @override
   Widget build(BuildContext context) {
