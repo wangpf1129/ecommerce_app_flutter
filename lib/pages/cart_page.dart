@@ -12,6 +12,10 @@ class CartPage extends StatefulWidget {
 }
 
 class _CartPageState extends State<CartPage> {
+  void removeItemFromCart(Shoe shoe) {
+    Provider.of<Cart>(context, listen: false).removeItemFromCart(shoe);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Consumer<Cart>(builder: (context, value, child) {
@@ -34,9 +38,8 @@ class _CartPageState extends State<CartPage> {
                 Shoe individualShoe = value.getUserCart()[index];
                 return CartItem(
                     individualShoe: individualShoe,
-                    onTabToRemoveItem: () {
-                      value.removeItemFromCart(individualShoe);
-                    });
+                    onTabToRemoveItem: () =>
+                        removeItemFromCart(individualShoe));
               },
             ),
           ),
