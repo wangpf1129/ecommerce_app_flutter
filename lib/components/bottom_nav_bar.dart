@@ -20,7 +20,7 @@ class BottomNavBar extends StatelessWidget {
       tabs: const [
         GButton(
           icon: Icons.home,
-          text: 'Home',
+          text: 'Shop',
         ),
         GButton(
           icon: Icons.shopping_bag_rounded,
