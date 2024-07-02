@@ -1,8 +1,8 @@
-import 'package:ecommerce_app_flutter/components/shoe_tile.dart';
-import 'package:ecommerce_app_flutter/models/cart.dart';
-import 'package:ecommerce_app_flutter/models/shoe.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:sneaker_shop_app/components/shoe_tile.dart';
+import 'package:sneaker_shop_app/models/cart.dart';
+import 'package:sneaker_shop_app/models/shoe.dart';
 
 class ShopPage extends StatefulWidget {
   const ShopPage({super.key});
